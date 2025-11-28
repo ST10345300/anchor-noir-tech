@@ -1,5 +1,15 @@
 import { motion } from 'motion/react';
-import { Globe, Smartphone, Code, Palette, Sparkles, Layers, ArrowRight, CheckCircle2 } from 'lucide-react';
+import {
+  Globe,
+  Smartphone,
+  Code,
+  Palette,
+  Sparkles,
+  Layers,
+  ArrowRight,
+  CheckCircle2
+} from 'lucide-react';
+
 import { Button } from '../components/ui/button';
 
 export function Services() {
@@ -123,7 +133,7 @@ export function Services() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen pt-32 pb-24"
+      className="min-h-screen pt-32 pb-24 bg-[#050505]"
     >
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
@@ -133,12 +143,14 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4A5BFF]/10 text-[#4A5BFF] mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4A5BFF]/20 text-[#4A5BFF] mb-6 backdrop-blur-xl border border-white/10">
             <Sparkles size={16} />
             <span className="text-sm">What We Offer</span>
           </div>
-          <h1 className="mb-6">Our Services</h1>
-          <p className="text-xl text-[#A8A8A8] max-w-3xl mx-auto mb-8">
+
+          <h1 className="mb-6 text-white">Our Services</h1>
+
+          <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
             Comprehensive digital solutions designed to help your startup succeed in the modern digital landscape
           </p>
         </motion.div>
@@ -157,25 +169,38 @@ export function Services() {
               whileHover={{ y: -5 }}
               className="group"
             >
-              <div className="h-full p-8 rounded-3xl bg-white border border-border hover:border-[#4A5BFF]/30 transition-all duration-300 shadow-sm hover:shadow-xl">
+              {/* GLASSMORPHIC CARD – original spacing kept */}
+              <div
+                className="
+                  h-full p-8 rounded-3xl
+                  bg-white/5 backdrop-blur-2xl
+                  border border-white/10
+                  hover:border-[#4A5BFF]/40
+                  transition-all duration-300
+                  shadow-lg hover:shadow-[#4A5BFF]/20
+                "
+              >
                 <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
                   style={{
-                    background: `linear-gradient(135deg, ${service.color}15 0%, ${service.color}05 100%)`,
+                    background: `linear-gradient(135deg, ${service.color}25 0%, ${service.color}05 100%)`,
                   }}
                 >
                   <service.icon size={32} style={{ color: service.color }} />
                 </div>
-                <h3 className="mb-3">{service.title}</h3>
-                <p className="text-[#A8A8A8] mb-6">{service.description}</p>
+
+                <h3 className="mb-3 text-white">{service.title}</h3>
+
+                <p className="text-white/60 mb-6">{service.description}</p>
+
                 <ul className="space-y-3">
-                  {service.features.map((feature) => (
+                  {service.features.map(feature => (
                     <li key={feature} className="flex items-start gap-2">
                       <CheckCircle2
                         size={20}
                         className="text-[#4A5BFF] flex-shrink-0 mt-0.5"
                       />
-                      <span className="text-[#070708]">{feature}</span>
+                      <span className="text-white/90">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -186,21 +211,23 @@ export function Services() {
       </div>
 
       {/* Process Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-white py-24">
+      <div className="py-24 bg-gradient-to-br from-black via-[#0A0A0A] to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4A5BFF]/10 text-[#4A5BFF] mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4A5BFF]/20 text-[#4A5BFF] mb-4 backdrop-blur-xl border border-white/10">
               <Sparkles size={16} />
               <span className="text-sm">Our Process</span>
             </div>
-            <h2 className="mb-4">How We Work</h2>
-            <p className="text-xl text-[#A8A8A8] max-w-2xl mx-auto">
+
+            <h2 className="text-white mb-4">How We Work</h2>
+
+            <p className="text-xl text-white/60 max-w-2xl mx-auto">
               A proven process that ensures successful project delivery every time
             </p>
           </motion.div>
@@ -213,14 +240,24 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative"
               >
-                <div className="p-6 rounded-2xl bg-white border border-border hover:border-[#4A5BFF]/30 transition-all duration-300">
+                {/* GLASSMORPHIC PROCESS CARD — spacing unchanged */}
+                <div
+                  className="
+                    p-6 rounded-2xl
+                    bg-white/5 backdrop-blur-2xl
+                    border border-white/10
+                    hover:border-[#4A5BFF]/40
+                    transition-all duration-300
+                  "
+                >
                   <div className="text-5xl font-bold text-[#4A5BFF]/20 mb-4">
                     {item.step}
                   </div>
-                  <h4 className="mb-3">{item.title}</h4>
-                  <p className="text-[#A8A8A8]">{item.description}</p>
+
+                  <h4 className="mb-3 text-white">{item.title}</h4>
+
+                  <p className="text-white/60">{item.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -228,7 +265,7 @@ export function Services() {
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -238,13 +275,16 @@ export function Services() {
           className="relative rounded-3xl overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-[#4A5BFF] to-[#7B88FF]" />
+
           <div className="relative z-10 px-8 py-16 md:px-16 text-center">
             <h2 className="text-white mb-4">Ready to Get Started?</h2>
+
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Let's discuss your project and see how we can help bring your vision to life.
             </p>
+
             <Button
-              className="bg-white text-[#4A5BFF] hover:bg-white/90 rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 group"
+              className="bg-white text-[#4A5BFF] hover:bg-white/90 rounded-2xl px-8 py-6 shadow-xl group"
               asChild
             >
               <a href="#contact" className="flex items-center gap-2">

@@ -168,7 +168,7 @@ export function Interactive3DCode() {
           className="text-center mt-8"
         >
           <p className="text-[#A8A8A8]">
-            {isHovered ? 'Interactive. Beautiful. Functional.' : 'Hover to interact'}
+            {isHovered ? 'Anchor Noir studios' : ''}
           </p>
         </motion.div>
       </motion.div>

@@ -23,7 +23,7 @@ export function CaseStudies() {
       color: '#4A5BFF',
     },
     {
-      title: 'Wellness Mobile App',
+      title: 'Mobile App',
       category: 'iOS & Android',
       client: 'HealthHub',
       year: '2024',

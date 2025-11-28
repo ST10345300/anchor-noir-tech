@@ -11,7 +11,7 @@ export function WhyChooseUs() {
     {
       icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime guarantee for peace of mind.',
+      description: 'Enterprise grade security and 99.9% uptime guarantee for peace of mind.',
     },
     {
       icon: Users,
@@ -114,7 +114,7 @@ export function WhyChooseUs() {
             <div>
               <h3 className="mb-6 text-white">Our Commitment to Excellence</h3>
               <p className="text-[#A8A8A8] mb-6 leading-relaxed">
-                We don't just build products—we create digital experiences that drive growth and delight users. Every project is treated with the same attention to detail and commitment to quality.
+                We don't just build products we create digital experiences that drive growth and delight users. Every project is treated with the same attention to detail and commitment to quality.
               </p>
               <div className="space-y-3">
                 {[
@@ -141,8 +141,8 @@ export function WhyChooseUs() {
             <div className="grid grid-cols-2 gap-6">
               {[
                 { number: '5+', label: 'Years Experience' },
-                { number: '50+', label: 'Projects Completed' },
-                { number: '30+', label: 'Happy Clients' },
+                { number: '20+', label: 'Projects Completed' },
+                { number: '15+', label: 'Happy Clients' },
                 { number: '24/7', label: 'Support Available' },
               ].map((stat, index) => (
                 <motion.div

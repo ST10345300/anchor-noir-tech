@@ -3,11 +3,11 @@ import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Case Studies', href: '#case-studies' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const services = [
@@ -28,7 +28,9 @@ export function Footer() {
   return (
     <footer className="bg-[#070708] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,8 +47,9 @@ export function Footer() {
             <p className="text-[#A8A8A8] mb-6">
               Building exceptional digital experiences for modern startups.
             </p>
+
             <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
@@ -120,34 +123,44 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={20} className="text-[#4A5BFF] mt-1 flex-shrink-0" />
-                <span className="text-[#A8A8A8]">+1 (555) 123-4567</span>
+                <span className="text-[#A8A8A8]">+27 (062) 071-0311</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-[#4A5BFF] mt-1 flex-shrink-0" />
-                <span className="text-[#A8A8A8]">
-                  San Francisco, CA
-                </span>
+                <span className="text-[#A8A8A8]">CPT, South Africa</span>
               </li>
             </ul>
           </motion.div>
+
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            
             <p className="text-[#A8A8A8] text-sm">
               © {new Date().getFullYear()} Anchor Noir Studios. All rights reserved.
             </p>
+
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-[#A8A8A8] hover:text-[#4A5BFF] transition-colors">
+              <a
+                href="/privacy-policy"
+                className="text-[#A8A8A8] hover:text-[#4A5BFF] transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-[#A8A8A8] hover:text-[#4A5BFF] transition-colors">
+
+              <a
+                href="/terms"
+                className="text-[#A8A8A8] hover:text-[#4A5BFF] transition-colors"
+              >
                 Terms of Service
               </a>
             </div>
+
           </div>
         </div>
+
       </div>
     </footer>
   );

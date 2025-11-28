@@ -1,3 +1,4 @@
 echo node_modules/ > .gitignore
 echo dist/ >> .gitignore
 echo .vercel/ >> .gitignore
+node_modules

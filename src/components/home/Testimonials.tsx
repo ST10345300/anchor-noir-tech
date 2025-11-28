@@ -5,24 +5,27 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 export function Testimonials() {
   const testimonials = [
     {
-      name: 'Sarah Chen',
-      role: 'CEO, TechFlow',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjM5NDg4NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'Anchor Noir Studios transformed our vision into reality. Their attention to detail and technical expertise is unmatched. Our platform has seen a 300% increase in user engagement.',
+      name: 'Daniel M.',
+      image:
+        'https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?auto=format&fit=crop&w=800&q=80',
+      content:
+        'Anchor Noir Studios brought our brand to life. Their attention to detail and understanding of modern digital identity are unmatched.',
       rating: 5,
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Founder, HealthHub',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjM5NDg4NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'Working with this team was an absolute pleasure. They delivered a stunning mobile app ahead of schedule and exceeded all our expectations. Highly recommended!',
+      name: 'Amina K.',
+      image:
+        'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+      content:
+        'Working with this team has been a game changer. The website they built doubled our conversions in under 60 days.',
       rating: 5,
     },
     {
-      name: 'Emily Thompson',
-      role: 'CTO, DataSync',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjM5NDg4NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'The custom software solution they built has streamlined our entire operation. Their technical knowledge and problem-solving abilities are truly impressive.',
+      name: 'Jamal R.',
+      image:
+        'https://images.unsplash.com/photo-1543353071-087092ec393c?auto=format&fit=crop&w=800&q=80',
+      content:
+        'Professional, fast, and incredibly talented. Our new platform works flawlessly and looks world-class.',
       rating: 5,
     },
   ];
@@ -69,7 +72,7 @@ export function Testimonials() {
           </div>
           <h2 className="mb-4 text-white">What Our Clients Say</h2>
           <p className="text-xl text-[#A8A8A8] max-w-2xl mx-auto">
-            Don't just take our word for it—hear from the startups we've helped grow
+            Real feedback from founders and brands we've partnered with.
           </p>
         </motion.div>
 
@@ -90,6 +93,7 @@ export function Testimonials() {
               className="group"
             >
               <div className="relative p-8 rounded-3xl glass-card hover:border-[#4A5BFF]/30 transition-all duration-300 hover:shadow-glow h-full">
+                
                 {/* Stars */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -117,7 +121,6 @@ export function Testimonials() {
                   </div>
                   <div>
                     <div className="font-medium text-white">{testimonial.name}</div>
-                    <div className="text-sm text-[#A8A8A8]">{testimonial.role}</div>
                   </div>
                 </div>
 
