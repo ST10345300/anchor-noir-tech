@@ -247,16 +247,17 @@ export function CaseStudies() {
                       <p className="text-[#A8A8A8]">{project.solution}</p>
                     </div>
 
+                    {/* ⭐ UPDATED: WHITE RESULTS TEXT */}
                     <div>
                       <h4 className="mb-3">Results</h4>
                       <ul className="space-y-2">
                         {project.results.map((result) => (
-                          <li key={result} className="flex items-start gap-2 text-[#070708]">
+                          <li key={result} className="flex items-start gap-2 text-white">
                             <div
                               className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
                               style={{ backgroundColor: project.color }}
                             />
-                            <span>{result}</span>
+                            <span className="text-white">{result}</span>
                           </li>
                         ))}
                       </ul>
